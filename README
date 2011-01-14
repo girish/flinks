@@ -1,5 +1,5 @@
 Register an FB app, get the app_secret, app_id, canvas app url
-Configure http://localhost:3000/ as redirect url while registering
+Configure http://localhost:3000/ as redirect url and Select IFRAME 
 
 Configuration
 
