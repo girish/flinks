@@ -1,5 +1,5 @@
-First register an app, get the secret, app_id, canvas app url
-Configure http://localhost:3000/ as redirect url while
+Register an FB app, get the app_secret, app_id, canvas app url
+Configure http://localhost:3000/ as redirect url while registering
 
 Configuration
 
@@ -17,6 +17,9 @@ development:
 #config/application.rb
 FB_APP_URL = canvas_app_url (apps.facebook.com/<appname....>)
 
+Dependencies
+    omniauth
+    fgraph
 
 While running the application on port 3000(or what ever registered on FB) locally, visit
 FB_APP_URL in browser.
