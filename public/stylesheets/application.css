@@ -1,17 +1,21 @@
 #links
 {
-  font-size:75%;
+  font-size:11px;
   width:100%;
   border-collapse:collapse;
 }
-#links td, #links th 
+#links td
 {
-  border:1px solid #94A3C4;
+  text-align:center;
+  border-top:1px solid #94A3C4;
+  border-bottom:1px solid #94A3C4;
 }
 #links th 
 {
   text-align:center;
-  padding-top:3px;
+  border-top:1px solid #ffffff;
+  border-bottom:1px solid #ffffff;
+  padding-top:2px;
   padding-bottom:2px;
   background-color:#3B5998;
   color:#ffffff;
