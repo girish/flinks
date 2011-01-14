@@ -1,0 +1,23 @@
+#links
+{
+  font-size:75%;
+  width:100%;
+  border-collapse:collapse;
+}
+#links td, #links th 
+{
+  border:1px solid #94A3C4;
+}
+#links th 
+{
+  text-align:center;
+  padding-top:3px;
+  padding-bottom:2px;
+  background-color:#3B5998;
+  color:#ffffff;
+}
+#links tr.alt td 
+{
+  color:#000000;
+  background-color:#EDEFF4;
+}
