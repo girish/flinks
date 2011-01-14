@@ -11,8 +11,8 @@ end
 #config/fgraph.yml
 
 development:
-  app_id: 193265447350503
-  app_secret: 29618f8fe11af22bfa0f29e80753aba6
+  app_id: 
+  app_secret: 
 
 #config/application.rb
 FB_APP_URL = canvas_app_url (apps.facebook.com/<appname....>)
