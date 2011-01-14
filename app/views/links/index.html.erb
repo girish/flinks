@@ -1,5 +1,5 @@
 
-<table>
+<table id=links>
   <tr>
     <th>Urls</th>
     <th>Likes Count</th>
@@ -7,12 +7,12 @@
     <th>Shares Count</th>
 
   </tr>
-  <% @links.each do |link| %>
+  <% @links.each_with_index do |link, index| %>
 
-    <tr><td><%= (link.url.size > 24) ? link.url[0..25] : link.url %></td>
-      <td><%= link.likes_count%></td>
-      <td><%= link.comments_count%></td>
-      <td><%= link.shares_count%></td>
+    <tr class=<%= ['alt',''][(index+1)%2] %>><td><%= (link.url.size > 24) ? link.url[0..25] : link.url %></td>
+      <td> <%= link.likes_count%></td>
+      <td> <%= link.comments_count%></td>
+      <td> <%= link.shares_count%></td>
     </tr>
   <%end%>
 
