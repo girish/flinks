@@ -1,0 +1,48 @@
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+        google.load('visualization', '1', {'packages':['table']});
+          </script>
+
+<table>
+  <tr>
+    <th>Urls</th>
+    <th>Likes Count</th>
+    <th>Comments Count</th>
+    <th>Shares Count</th>
+
+  </tr>
+  <% @links.each do |link| %>
+
+    <tr><td><%= (link.url.size > 24) ? link.url[0..25] : link.url %></td>
+      <td><%= link.likes_count%></td>
+      <td><%= link.comments_count%></td>
+      <td><%= link.shares_count%></td>
+    </tr>
+  <%end%>
+
+</table>
+<div id=table_div>
+  </div>
+<script>
+  function drawTable() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'URL');
+    data.addColumn('number', 'Links Count');
+    data.addColumn('number', 'Comments Count');
+    data.addColumn('number', 'Shares Count');
+    data.addRows(<%=@links.size%>);
+  <% @links.each_with_index do |link,i| %>
+    data.setCell(<%=i%>, 0, <%= (link.url.size > 24) ? link.url[0..25] : link.url %>);
+    data.setCell(<%=i%>, 1, <%= link.likes_count%>);
+    data.setCell(<%=i%>, 2, <%= link.comments_count%>);
+    data.setCell(<%=i%>, 3, <%= link.shares_count%>);
+  <%end%>
+    var table = new google.visualization.Table(document.getElementById('table_div'));
+    table.draw(data, {showRowNumber: true});
+
+    google.visualization.events.addListener(table, 'select', function() {
+      var row = table.getSelection()[0].row;
+      alert('You selected ' + data.getValue(row, 0));
+    });
+  }
+</script>
