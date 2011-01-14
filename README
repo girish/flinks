@@ -18,5 +18,5 @@ development:
 FB_APP_URL = canvas_app_url (apps.facebook.com/<appname....>)
 
 
-While running the application on port 3000(or what ever registered on FB) locally and visit
+While running the application on port 3000(or what ever registered on FB) locally, visit
 FB_APP_URL in browser.
